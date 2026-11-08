@@ -1,0 +1,25 @@
+{
+  "name": "dian-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "بک‌اند و پنل ادمین فروشگاه تاسیسات دایان",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "migrate": "node --env-file-if-exists=.env scripts/migrate.js",
+    "create-admin": "node --env-file-if-exists=.env scripts/create-admin.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "multer": "^2.0.0",
+    "pg": "^8.13.0",
+    "zod": "^4.6.7"
+  }
+}
